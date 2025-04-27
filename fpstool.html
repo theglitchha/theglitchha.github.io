@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title> theglitchha Computer Entertainment's FPS Tool</title>
+
+        <script src="https://kit.fontawesome.com/0906c9376a.js" crossorigin="anonymous"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+        <link rel="stylesheet" href="main.css">
+        <style>
+            .accordion {
+                background-color: #1a1a1a;
+                font-family: 'Courier New', Courier, monospace;
+                color: #ffffff;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                text-align: left;
+                padding: 25px 15px;
+                border: none;
+                outline: none;
+                transition: 0.4s;
+            }
+
+            .active, .accordion:hover {
+                background-color: #080808;
+            }
+
+            .accordion:after {
+                content: '\002B';
+                font-size: 18px;
+                font-weight: bold;
+                color: #ffffff;
+                float: right;
+                margin-left: 5px;
+            }
+            
+            .active::after {
+                content: "\2212";
+            }
+
+            .accordionpanel {
+                padding: 0 18px;
+                background-color: #0f0f0f;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+            }
+
+            .button {
+                padding: 15px 25px;
+                font-size: 24px;
+                text-align: center;
+                cursor: pointer;
+                outline: none;
+                color: #fff;
+                background-color: #aa0404;
+                border: none;
+                border-radius: 15px;
+            }
+
+            .button:hover {background-color: #8e3e3e}
+
+            .button:active {
+                background-color: #8e3e3e;
+                transform: translateY(4px);
+            }
+        </style>
+   </head>
+   <body>
+        <div class="sidenav">
+            <a href="index.html"><i class="fa-solid fa-chevron-left"></i> Main page</a>
+            <a href="#explanation"><i class="fa-solid fa-circle-info"></i> Explanation</a>
+            <a href="#downloads"><i class="fa-solid fa-file-arrow-down"></i> Downloads</a>
+        </div>
+        
+        <div class="main">
+            <div style="margin-bottom: 100px;">
+                <h1 style="text-align: center; margin: auto;"> FPS Tool</h1>
+            </div>
+            
+            <div class="clearfix" id="explanation" style="margin-bottom: 200px;">
+                
+                <p> FPS Tool is a framework for multiplayer FPS games in Godot.</p>
+
+                <div class="responsive" style="float: right;">
+                    <div class="gallery">
+                        <img src="images/fps_tool_1.png" alt="image">
+                        <div class="desc"> In-game screenshot of test map</div>
+                    </div>
+                </div>
+
+                <p> It is a stepping stone for my upcoming FPS game. The game will undergo a name change
+                    when it is released as a full product.
+                </p>
+            </div>
+
+            <div class="clearfix" id="downloads">
+                <h2 style="margin: auto;"> Downloads</h2>
+                <button class="accordion"> 0.1.1</button>
+                    <div class="accordionpanel">
+                    <ul>
+                        <li> First test build</li>
+                    </ul>
+                    <ul style="list-style-type: none;">
+                        <li style="display: inline-block;">
+                            <a href="fpstoolbuilds/0.1.1.zip" download>
+                                <button class="button"><i class="fa-solid fa-download"></i> Direct Download</button>
+                            </a></li>
+                        <li style="display: inline-block;">
+                            <a href="https://theglitchha.itch.io/fps-tool" target="_self">
+                                <button class="button"><i class="fa-brands fa-itch-io"></i> Itch.io</button>
+                            </a></li>
+                    </ul>
+                    
+                    </div>
+            </div>
+        </div>
+
+
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+              });
+            }
+        </script>
+   </body>
+</html>
