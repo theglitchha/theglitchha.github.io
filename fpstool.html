@@ -16,12 +16,11 @@
             .accordion {
                 background-color: #1a1a1a;
                 font-family: 'Courier New', Courier, monospace;
-                color: #ffffff;
+                color: #F7F7FF;
                 cursor: pointer;
-                padding: 18px;
                 width: 100%;
                 text-align: left;
-                padding: 25px 15px;
+                padding: 1.25rem 1rem;
                 border: none;
                 outline: none;
                 transition: 0.4s;
@@ -35,7 +34,7 @@
                 content: '\002B';
                 font-size: 18px;
                 font-weight: bold;
-                color: #ffffff;
+                color: #F7F7FF;
                 float: right;
                 margin-left: 5px;
             }
@@ -45,7 +44,7 @@
             }
 
             .accordionpanel {
-                padding: 0 18px;
+                padding: 0 1rem;
                 background-color: #0f0f0f;
                 max-height: 0;
                 overflow: hidden;
@@ -53,22 +52,24 @@
             }
 
             .button {
-                padding: 15px 25px;
-                font-size: 24px;
+                padding: 1rem 1.25rem;
+                font-size: 1.5rem;
                 text-align: center;
                 cursor: pointer;
                 outline: none;
-                color: #fff;
-                background-color: #aa0404;
+                color: #F7F7FF;
+                background-color: #EA526F;
                 border: none;
-                border-radius: 15px;
+                border-radius: 1rem;
             }
 
-            .button:hover {background-color: #8e3e3e}
+            .button:hover {
+                background-color: #9c4545
+            }
 
             .button:active {
-                background-color: #8e3e3e;
-                transform: translateY(4px);
+                background-color: #9c4545;
+                transform: translateY(0.25rem);
             }
         </style>
    </head>
@@ -80,24 +81,25 @@
         </div>
         
         <div class="main">
-            <div style="margin-bottom: 100px;">
+            <div style="margin-bottom: 6.25rem;">
                 <h1 style="text-align: center; margin: auto;"> FPS Tool</h1>
             </div>
             
-            <div class="clearfix" id="explanation" style="margin-bottom: 200px;">
-                
-                <p> FPS Tool is a framework for multiplayer FPS games in Godot.</p>
-
-                <div class="responsive" style="float: right;">
-                    <div class="gallery">
-                        <img src="images/fps_tool_1.png" alt="image">
-                        <div class="desc"> In-game screenshot of test map</div>
+            <div class="clearfix" id="explanation" style="margin-bottom: 12.5rem;">
+                <div class="content-box">
+                    <div class="text">
+                        <p> FPS Tool is a framework for multiplayer FPS games in Godot.</p>
                     </div>
+                    <img src="images/fps_tool_1.png" alt="image">
+                    <div class="text">
+                       <p> 
+                            It is a stepping stone for my upcoming FPS game. The game will undergo a name change
+                            when it is released as a full product.
+                        </p> 
+                    </div>
+                    
                 </div>
-
-                <p> It is a stepping stone for my upcoming FPS game. The game will undergo a name change
-                    when it is released as a full product.
-                </p>
+                
             </div>
 
             <div class="clearfix" id="downloads">
